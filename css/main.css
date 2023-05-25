@@ -1,0 +1,305 @@
+:root {
+    --hill-green: #1bbc9c;
+    --white-plume: #f0f0f0;
+    --night-hue: #343434;
+    --black: #191b17;
+    --transition: all 0.5s ease-in-out;
+}
+* {
+    font-family: 'Hind Siliguri', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+/* setup and reuseable stylings */
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: var(--black)
+}
+li{
+    list-style-type: none;
+}
+button {
+    cursor: pointer;
+    outline: 0;
+    background: transparent;
+}
+.container {
+    max-width: 1328px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0.6rem 0;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    padding: 4rem;
+}
+
+/* header */
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../assets/Dream\ house.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+}
+.brand-and-toggler {
+    font-size: 1.7rem;
+    padding: 0.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-brand {
+    font-weight: 600;
+    color: var(--night-hue);
+}
+.navbar-brand span {
+    color: var(--hill-green);
+}
+.navbar-toggler {
+    border: none;
+    color: var(--hill-green);
+}
+.navbar-nav {
+    margin: 0.2rem 0 0.6rem 0;
+}
+.nav-item {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+}
+.nav-item:hover {
+    background: var(--white-plume);
+    transition: all 0.5s ease-in-out;
+}
+.nav-link {
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    opacity: 0.65;
+    transition: var(--transition);
+}
+.nav-link:hover {
+    color: var(--hill-green)!important;
+}
+.navbar-collapse {
+    display: none;
+}
+.profile {
+    width: 15rem;
+    height: 15rem;
+    transition: all 0.7s ease-in-out;
+    margin-top: 3rem;
+}
+.profile:hover {
+    width: 16rem;
+    height: 16rem;
+    transition: all 0.7s ease-in-out;
+}
+.profile-pic {    
+    border: 3px solid var(--hill-green);
+    cursor: pointer;
+    border-radius: 50%;
+}
+.hero-div {
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+}
+.hero-div h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.4rem;
+}
+.hero-div p {
+    font-size: 1.05rem;
+    color: var(--white-plume);
+    letter-spacing: 3px;
+}
+.hero-btns {
+    margin-top: 2.5rem;
+}
+.hero-btns button {
+    border: 3.5px solid #fff;
+    border-radius: 2rem;
+    padding: 0.5rem 1.8rem;
+    text-transform: uppercase;
+}
+.btn-trans {
+    margin-right: 1.5rem;
+    color: #fff;
+    transition: var(--transition);
+}
+.btn-trans:hover {
+    background: var(--hill-green);
+    border-color: var(--hill-green);
+}
+.btn-white {
+    background: #fff;
+    color: var(--night-hue);
+    transition: var(--transition);
+}
+.btn-white:hover {
+    background: transparent;
+    color: #fff;
+}
+
+/* PORTFORLIO */
+.detail {
+    background: var(--white-plume);
+}
+.port-container {
+    display: none;
+}
+.detail-item {
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
+    -moz-box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
+    margin: 2rem 0;
+    padding: 3rem 1.5rem;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+.detail-item:hover {
+    -webkit-box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+    -moz-box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+    box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+    transform: translateY(-5px);
+}
+
+/* FRIENDS */
+.fren-collapse {
+    display: none;
+}
+.pic-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../assets/Beautiful\ Barcelona.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem; 
+}
+.friend-pic {
+    background: var(--white-plume);
+    margin: 1.5rem 0;
+    padding: 1rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+.friend-pic:hover {
+    -webkit-box-shadow: 0 12px 10px -1px rgba(217, 217, 217, 1);
+    -moz-box-shadow: 0 12px 10px -1px rgba(217, 217, 217, 1);
+    box-shadow: 0 12px 10px -1px rgba(217, 217, 217, 1);
+    transition: var(--transition);
+}
+.fren {    
+    border: 3px solid var(--night-hue);
+    cursor: pointer;
+    width: 40%;
+    max-width: 700px;
+    height: auto;
+}
+
+
+/* !!!   MEDIA QUERIES   !!!*/
+@media screen and (min-width: 990px) {
+    .navbar {
+        background: transparent;
+        margin-top: 1.4rem;
+    }
+    .navbar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar-brand {
+        color: var(--white-plume);
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .navbar-toggler {
+        display: none;
+    }
+    .navbar-collapse {
+        display: block!important;
+    }
+    .navbar-nav {
+        display: flex;
+        margin: 0;
+    }
+    .nav-item {
+        margin-left: 1.5rem;
+    }
+    .nav-link {
+        color: var(--white-plume);
+    }
+    .profile {
+        margin-top: 5.5rem;
+    }
+    .hero-div {
+        margin-bottom: 5rem;
+    }
+    .hero-div h1 {
+        font-size: 3.5rem;
+    }
+    .btn-trans {
+        display: inline-block;
+        margin-right: 2rem;
+    }
+
+    /* navbar change */
+    .navbar {
+        -webkit-box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+        -moz-box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+        box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+        margin-top: 0;
+        background: #fff;
+    }
+    .navbar .navbar-brand {
+        color: var(--night-hue);
+    }
+    .navbar .nav-link {
+        color: var(--night-hue);
+    }
+}
